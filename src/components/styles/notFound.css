@@ -1,0 +1,13 @@
+.divNoFilmsFound{
+    height: 56.5vh;
+}
+
+.textNoFilmsFound{
+    margin: 0;
+    text-align: center;
+    padding-top: 15vh;
+    font-family: Arial;
+    font-weight: 100;
+    font-size: 4.5rem;
+    color: #d7d7d7;
+}
