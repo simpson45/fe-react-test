@@ -1,1 +1,2 @@
-# fe-react-test
+Test React-Redux project for internal cources.
+
