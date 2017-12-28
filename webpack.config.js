@@ -1,6 +1,5 @@
-var webpack = require('webpack');
 var path = require('path');
-var ExtractTextWebpackPlugin = require("extract-text-webpack-plugin");
+var webpack = require('webpack');
 
 module.exports = {
     devtool: 'cheap-module-eval-source-map',
@@ -16,16 +15,15 @@ module.exports = {
     plugins: [
         new webpack.optimize.OccurrenceOrderPlugin(),
         new webpack.HotModuleReplacementPlugin(),
-        new webpack.NoEmitOnErrorsPlugin(),
-        new ExtractTextWebpackPlugin("[name].css")
+        new webpack.NoEmitOnErrorsPlugin()
     ],
     resolve: {
-        extensions: ['.js', '.jsx']
+        extensions: ['.ts', '.tsx', '.js', '.jsx']
     },
     module: {
         rules: [
             //{ test: /\.js$/, loader: 'react-hot-loader', exclude: /node_modules/},
-            { test: /\.js$/,
+            { test: /\.jsx?$/,
                 exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader',
@@ -34,19 +32,40 @@ module.exports = {
                     }
                 }
             },
-            { test: /\.jsx$/,
-                exclude: /node_modules/,
-                use: {
-                    loader: 'babel-loader',
-                    options:{
-                        plugins: ['transform-runtime']
-                    }
-                }
+            {
+                test: /\.css$/,
+                use: [
+                    require.resolve('style-loader'),
+                    {
+                        loader: require.resolve('css-loader'),
+                        options: {
+                            importLoaders: 1,
+                            modules: true,
+                            localIdentName: "[name]__[local]___[hash:base64:5]"
+                        },
+                    },
+                    /*{
+                        loader: require.resolve('postcss-loader'),
+                        options: {
+                            // Necessary for external CSS imports to work
+                            // https://github.com/facebookincubator/create-react-app/issues/2677
+                            ident: 'postcss',
+                            plugins: () => [
+                                require('postcss-flexbugs-fixes'),
+                                autoprefixer({
+                                    browsers: [
+                                        '>1%',
+                                        'last 4 versions',
+                                        'Firefox ESR',
+                                        'not ie < 9', // React doesn't support IE8 anyway
+                                    ],
+                                    flexbox: 'no-2009',
+                                }),
+                            ],
+                        },
+                    },*/
+                ],
             },
-            { test: /\.css$/,
-                use: ["style-loader", "css-loader"]
-                //use: ExtractTextWebpackPlugin.extract({ fallback: "style-loader", use: "css-loader"})
-            }
         ]
     }
 };

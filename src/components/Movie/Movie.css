@@ -1,0 +1,74 @@
+.movieBaner{
+    margin: 1%;
+    margin-top: 3vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 316px;
+    height: auto;
+    cursor: pointer;
+    text-decoration-line: none;
+}
+
+.poster{
+    background-color: whitesmoke;
+    width: 100%;
+    height: 94%;
+    margin: 0;
+}
+
+img{
+    width: 100%;
+    margin: 0 auto;
+}
+.name, .level {
+    display: block;
+}
+
+.name {
+    width: 65%;
+    font-size: 1vw;
+    float: left;
+    margin: 1% 0 0 2%;
+    color: #3f3f3f;
+    text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.level {
+    font-size: 1vw;
+    width: 10%;
+    margin: 0 4% 0 2%;
+    color: #797979;
+}
+
+.year {
+    width: 5vw;
+    font-size: 0.9vw;
+    margin: 0;
+    margin-left: auto;
+    margin-right: 2%;
+    color: #797979;
+    border: 1px;
+    border-radius: 0.2vw;
+    border-style: solid;
+    border-color: #797979;
+    padding: 1% 1% 1% 1%;
+}
+
+@media screen and (max-width: 1024px) {
+    .movieBaner{
+        width: 638px;
+    }
+
+    .name, .level {
+        font-size: 4vw;
+    }
+
+    .year {
+        width: 17vw;
+        font-size: 3.3vw;
+    }
+}

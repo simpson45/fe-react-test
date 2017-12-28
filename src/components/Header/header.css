@@ -1,0 +1,75 @@
+header {
+    height: 26vh;
+    background-image: url('https://lh4.googleusercontent.com/Q8EDlqpANZGH4EvpoeHNhTJ6DOT1Fcw3GbB2umhQ43aWr42Qlkf4fywD_cFZ_VpVRsa2-f4BvsL8Vns=w1920-h949-rw');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.divLogo {
+    display: flex;
+    height: 6vh;
+    width: 85vw;
+    margin-left: 7vw;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: inline;
+    font-family: Arial;
+    color: #f55263;
+    font-size: 120%;
+    margin: 0;
+    cursor: default;
+}
+
+h3 {
+    font-family: Arial;
+    color: white;
+    margin-left: 7vw;
+    cursor: default;
+}
+
+input {
+    width: 55vw;
+    height: 5vh;
+    margin-left: 7vw;
+    margin-right: 7vw;
+    background-color: black;
+    border-bottom-color: #f55263;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    font-family: Arial;
+    color: white;
+    font-size: 110%;
+    padding-left: 3vw;
+}
+
+input:focus {
+    outline: none;
+}
+
+.searchDiv {
+    display: flex;
+    align-items: center;
+    height: 10vh;
+}
+
+.searchButton {
+    border-radius: 0.3vh;
+    border: 0;
+    width: 20vw;
+    height: 7vh;
+    margin-right: 7vw;
+    margin-left: auto;
+    cursor: pointer;
+    background-color: #f55263;
+    font-family: Arial;
+    font-size: 2vw;
+    color: white;
+}
+
+button:focus {
+    outline: none;
+}

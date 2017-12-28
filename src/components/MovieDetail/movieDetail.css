@@ -1,0 +1,100 @@
+.movieDetail {
+    background-image: url('https://lh4.googleusercontent.com/Q8EDlqpANZGH4EvpoeHNhTJ6DOT1Fcw3GbB2umhQ43aWr42Qlkf4fywD_cFZ_VpVRsa2-f4BvsL8Vns=w1920-h949-rw');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+h1, h2{
+    font-family: Arial;
+}
+
+.headerMovieDetail {
+    display: flex;
+    height: 6vh;
+    width: 85vw;
+    margin-left: 7vw;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.backButton {
+    border-radius: 0.3vh;
+    border: 0;
+    height: 4vh;
+    width: 10vw;
+    display: inline;
+    background-color: white;
+    color: #f55263;
+    font-size: 1vw;
+    cursor: pointer;
+}
+
+.movieFigure {
+    float: left;
+    width: 30vw;
+    height: 46vw;
+    margin-top: 2vh;
+    margin-left: 7vw;
+    margin-bottom: 7vh;
+}
+
+.movieInfo {
+    display: flex;
+}
+
+.info {
+    width: 50vw;
+    margin: 3vh 7vw 0 3vw;
+    float: right;
+    cursor: default;
+}
+
+.name {
+    width: 70%;
+    font-size: 3rem;
+    color: #f55263;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.mark {
+    border-style: solid;
+    border-radius: 50%;
+    width: auto;
+    height: auto;
+    text-align: center;
+    color: #b5e584;
+    border-width: 1px;
+    font-weight: 100;
+    position: absolute;
+    top: 8vh;
+    font-size: 2vw;
+    padding: 1%;
+    right: 10vw;
+}
+
+.year {
+    display: block;
+    margin-top: 6vh;
+    color: white;
+
+}
+
+.durability {
+    color: white;
+}
+
+.story, .movieDirector, .movieCast{
+    font-weight: 100;
+    color: #c8c8c8;
+}
+
+.story {
+    color: #d7d7d7;
+    margin-bottom: 7vh;
+}
+
